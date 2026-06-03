@@ -32,7 +32,7 @@ form.addEventListener('submit', async (e) => {
 });
 
 function shareWaitlist() {
-  const text = "I just joined the waitlist for InboxDone — human VA + AI inbox management that actually works. Get 40% off early access:";
+  const text = "Just claimed a beta spot with InboxDone — a VA + AI service that manages your real estate inbox so you never miss a lead at a showing again:";
   const url = window.location.href;
   if (navigator.share) {
     navigator.share({ title: 'InboxDone', text, url }).catch(() => {});
