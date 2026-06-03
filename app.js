@@ -67,7 +67,7 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(
-  '.feature-card, .problem-card, .step, .testimonial-card, .pricing-card, .faq-item, .split-col'
+  '.feature-card, .problem-card, .step, .testimonial-card, .pricing-card, .faq-item, .split-col, .addon-card'
 ).forEach((el) => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
