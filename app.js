@@ -1,51 +1,61 @@
+// Waitlist form submission
 const form = document.getElementById('waitlistForm');
-const success = document.getElementById('waitlistSuccess');
+const successMessage = document.getElementById('successMessage');
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  const btnText = form.querySelector('.btn-text');
-  const btnLoading = form.querySelector('.btn-loading');
-  btnText.style.display = 'none';
-  btnLoading.style.display = 'inline';
+    const data = {
+      firstName: form.firstName.value,
+      lastName: form.lastName.value,
+      email: form.email.value,
+      role: form.role.value,
+      plan: form.plan.value,
+      pain: form.pain.value,
+      submittedAt: new Date().toISOString(),
+    };
 
-  // Collect form data
-  const data = {
-    name: form.name.value,
-    email: form.email.value,
-    business: form.business.value,
-    size: form.size.value,
-    pain: form.pain.value,
-    timestamp: new Date().toISOString(),
-  };
+    // Store locally as demo (replace with real endpoint like Formspree, ConvertKit, etc.)
+    const existing = JSON.parse(localStorage.getItem('inboxaxis_waitlist') || '[]');
+    existing.push(data);
+    localStorage.setItem('inboxaxis_waitlist', JSON.stringify(existing));
 
-  // Store locally (replace with your API/Airtable/Mailchimp endpoint)
-  const existing = JSON.parse(localStorage.getItem('flowmind_waitlist') || '[]');
-  existing.push(data);
-  localStorage.setItem('flowmind_waitlist', JSON.stringify(existing));
+    form.style.display = 'none';
+    successMessage.style.display = 'block';
 
-  // Simulate network delay for realism
-  await new Promise((r) => setTimeout(r, 1200));
+    // Update spots counter
+    const spotsCount = document.querySelector('.spots-count');
+    const spotsNote = document.querySelector('.spots-note');
+    const spotsFill = document.querySelector('.spots-fill');
+    if (spotsCount) {
+      spotsCount.textContent = '2';
+      spotsNote.textContent = '2 of 3 spots reserved';
+      spotsFill.style.width = '66%';
+    }
+  });
+}
 
-  // Show success
-  form.style.display = 'none';
-  success.style.display = 'block';
-  success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-});
+// FAQ accordion
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('open');
 
-function shareWaitlist() {
-  const text = "I just joined the waitlist for FlowMind AI — AI automation for small businesses. Get 50% off early access 👇";
-  const url = window.location.href;
-  if (navigator.share) {
-    navigator.share({ title: 'FlowMind AI', text, url }).catch(() => {});
-  } else {
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-    window.open(twitterUrl, '_blank');
+  // Close all
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.classList.remove('open');
+    q.nextElementSibling.classList.remove('visible');
+  });
+
+  // Open clicked if it was closed
+  if (!isOpen) {
+    btn.classList.add('open');
+    answer.classList.add('visible');
   }
 }
 
-// Smooth scroll for all anchor links
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', (e) => {
     const target = document.querySelector(link.getAttribute('href'));
     if (target) {
@@ -53,24 +63,4 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
-});
-
-// Animate elements on scroll
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
-
-document.querySelectorAll('.feature-card, .problem-card, .step, .testimonial-card, .pricing-card, .faq-item').forEach((el) => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
 });

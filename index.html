@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FlowMind AI — Your Business on Autopilot</title>
-  <meta name="description" content="FlowMind AI handles your repetitive business tasks with custom AI automation — no tech skills needed. Join the waitlist." />
+  <title>InboxAxis — Done-For-You Email & Inbox Management</title>
+  <meta name="description" content="Stop drowning in email. InboxAxis pairs trained virtual assistants with AI tools to manage your inbox completely — so you can focus on running your business." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
@@ -15,356 +15,515 @@
   <nav class="nav">
     <div class="nav-inner">
       <div class="logo">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">FlowMind <span class="logo-ai">AI</span></span>
+        <div class="logo-mark">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect width="28" height="28" rx="7" fill="#2563EB"/>
+            <path d="M5 9.5L14 15.5L23 9.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <rect x="5" y="8" width="18" height="13" rx="2" stroke="white" stroke-width="2" fill="none"/>
+            <circle cx="20" cy="8" r="4" fill="#10B981"/>
+          </svg>
+        </div>
+        <span class="logo-text">Inbox<span class="logo-accent">Axis</span></span>
       </div>
-      <a href="#waitlist" class="btn btn-sm">Join Waitlist</a>
+      <a href="#waitlist" class="nav-cta">Join Waitlist</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="badge">🚀 Now accepting early access applications</div>
-    <h1>Stop Doing Work<br /><span class="gradient-text">AI Can Do For You</span></h1>
-    <p class="hero-sub">
-      FlowMind AI builds and manages custom AI automations for your business —
-      follow-ups, bookings, invoices, customer replies, and more.
-      <strong>You focus on growth. We handle the rest.</strong>
-    </p>
-    <div class="hero-cta">
-      <a href="#waitlist" class="btn btn-primary btn-lg">Get Early Access — Free</a>
-      <span class="hero-cta-note">Limited spots · No credit card required</span>
-    </div>
-    <div class="hero-proof">
-      <div class="avatars">
-        <img src="https://i.pravatar.cc/40?img=1" alt="" />
-        <img src="https://i.pravatar.cc/40?img=2" alt="" />
-        <img src="https://i.pravatar.cc/40?img=3" alt="" />
-        <img src="https://i.pravatar.cc/40?img=4" alt="" />
-        <img src="https://i.pravatar.cc/40?img=5" alt="" />
+    <div class="hero-inner">
+      <div class="beta-badge">
+        <span class="badge-dot"></span>
+        <span>Beta Access Now Open — <strong>12 spots remaining</strong></span>
       </div>
-      <span>Join <strong>2,400+</strong> business owners on the waitlist</span>
+      <h1 class="hero-headline">
+        Your Inbox,<br/>
+        <span class="gradient-text">Completely Handled.</span>
+      </h1>
+      <p class="hero-sub">
+        InboxAxis gives you a trained, dedicated team — real human VAs backed by AI — who manage your email inbox every single day. Zero chaos. Zero missed messages. Total peace of mind.
+      </p>
+      <div class="hero-actions">
+        <a href="#waitlist" class="btn-primary">Claim Your Beta Spot <span class="btn-arrow">→</span></a>
+        <a href="#how-it-works" class="btn-ghost">See How It Works</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <span class="trust-icon">✓</span> Real trained humans, not bots
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">✓</span> AI-enhanced accuracy
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">✓</span> Done-for-you, fully managed
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="inbox-mockup">
+        <div class="mockup-bar">
+          <div class="mockup-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mockup-title">Your Inbox — Handled</div>
+        </div>
+        <div class="mockup-body">
+          <div class="email-row handled">
+            <div class="email-avatar" style="background:#10B981">JS</div>
+            <div class="email-info">
+              <span class="email-sender">John Smith</span>
+              <span class="email-preview">Re: Contract review — flagged for you</span>
+            </div>
+            <div class="email-tag tag-flagged">Flagged</div>
+          </div>
+          <div class="email-row handled">
+            <div class="email-avatar" style="background:#6366F1">PR</div>
+            <div class="email-info">
+              <span class="email-sender">Partnership Request</span>
+              <span class="email-preview">Responded with your template ✓</span>
+            </div>
+            <div class="email-tag tag-done">Done</div>
+          </div>
+          <div class="email-row handled">
+            <div class="email-avatar" style="background:#F59E0B">NL</div>
+            <div class="email-info">
+              <span class="email-sender">Newsletter Digest</span>
+              <span class="email-preview">Archived — summary sent to you</span>
+            </div>
+            <div class="email-tag tag-archived">Archived</div>
+          </div>
+          <div class="email-row handled">
+            <div class="email-avatar" style="background:#EF4444">SP</div>
+            <div class="email-info">
+              <span class="email-sender">Spam / Cold Outreach</span>
+              <span class="email-preview">Deleted. Never reached you.</span>
+            </div>
+            <div class="email-tag tag-deleted">Deleted</div>
+          </div>
+          <div class="mockup-status">
+            <span class="status-dot"></span>
+            <span>Your VA is online — inbox clear as of 9:02 AM</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PROBLEM -->
-  <section class="section section-problem">
-    <div class="container">
-      <div class="section-label">The Problem</div>
-      <h2>You Know AI Could Help. You Just Don't Have Time to Figure It Out.</h2>
+  <section class="problem">
+    <div class="section-inner">
       <div class="problem-grid">
-        <div class="problem-card">
-          <div class="problem-icon">😩</div>
-          <p>Spending hours on repetitive tasks that feel impossible to delegate</p>
+        <div class="problem-copy">
+          <p class="section-label">The Real Cost of Email Overload</p>
+          <h2>You Didn't Start a Business to Live in Your Inbox.</h2>
+          <p>Executives and business owners spend an average of <strong>2.5 hours per day</strong> on email. That's 600+ hours a year — time not spent on strategy, growth, or life.</p>
+          <p>Hiring a full-time EA is expensive. VA marketplaces are risky. AI-only tools miss nuance and context. There's been no middle path — until now.</p>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">🤯</div>
-          <p>Tried AI tools but gave up — too complicated, too generic, no real results</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">💸</div>
-          <p>Can't afford a full team but can't keep doing everything yourself either</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-icon">⏰</div>
-          <p>Leads falling through the cracks while you're busy doing the actual work</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOLUTION -->
-  <section class="section section-solution">
-    <div class="container">
-      <div class="section-label">The Solution</div>
-      <h2>We Build & Run Your AI Automation — Done For You</h2>
-      <p class="section-sub">FlowMind AI is a managed service. We learn your business, set up AI automations tailored to you, and keep them running. No software to learn. No prompts to write. Just results.</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">💬</div>
-          <h3>AI Customer Reply Bot</h3>
-          <p>Answers inquiries 24/7 via email, SMS, or chat — in your voice — and books appointments automatically.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📧</div>
-          <h3>Lead Follow-Up on Autopilot</h3>
-          <p>Never lose a lead again. Our AI follows up with prospects via personalized sequences until they convert or opt out.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🧾</div>
-          <h3>Invoice & Quote Generation</h3>
-          <p>AI drafts professional quotes and invoices from a quick voice note or message — ready to send in seconds.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📅</div>
-          <h3>Smart Scheduling & Reminders</h3>
-          <p>Automated appointment reminders cut no-shows by up to 80%. Reschedules handled without lifting a finger.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>Weekly Business Summaries</h3>
-          <p>Every Monday, get a plain-English AI summary of your revenue, leads, and what needs your attention.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔗</div>
-          <h3>Connects to Tools You Use</h3>
-          <p>Works with Google, Outlook, QuickBooks, Stripe, HubSpot, WhatsApp, and 100+ other apps you already use.</p>
+        <div class="problem-stats">
+          <div class="stat-card">
+            <div class="stat-number">2.5 hrs</div>
+            <div class="stat-label">avg. daily time lost to email</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">38%</div>
+            <div class="stat-label">of emails require no reply at all</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">$75K+</div>
+            <div class="stat-label">cost of a full-time executive assistant</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">Day 1</div>
+            <div class="stat-label">your inbox is fully managed from day one</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="section section-how">
-    <div class="container">
-      <div class="section-label">How It Works</div>
-      <h2>Up and Running in 5 Days</h2>
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-inner">
+      <p class="section-label centered">The InboxAxis Method</p>
+      <h2 class="centered">Human Intelligence + AI Precision</h2>
+      <p class="section-sub centered">A trained VA manages your inbox every day, guided by AI tools that catch what humans miss. You get the best of both worlds — and none of the work.</p>
+
       <div class="steps">
         <div class="step">
-          <div class="step-num">01</div>
-          <div class="step-content">
-            <h3>Discovery Call (30 min)</h3>
-            <p>We learn your business, your bottlenecks, and which tasks are eating your time.</p>
+          <div class="step-number">01</div>
+          <div class="step-icon">🎯</div>
+          <h3>Onboarding Audit</h3>
+          <p>We learn your inbox style, priorities, key contacts, and communication preferences. Your VA is briefed before they ever touch your inbox.</p>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-icon">🤝</div>
+          <h3>Daily Management</h3>
+          <p>Your dedicated VA sorts, responds, archives, flags, and filters — every day. AI tools assist with drafts, categorization, and pattern detection.</p>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-icon">📋</div>
+          <h3>Daily Briefing</h3>
+          <p>Each morning you receive a clean summary: what needs your attention, what was handled, and what's coming. That's it — no inbox required.</p>
+        </div>
+        <div class="step-divider"></div>
+        <div class="step">
+          <div class="step-number">04</div>
+          <div class="step-icon">📈</div>
+          <h3>Continuous Improvement</h3>
+          <p>We refine your SOPs weekly. As your VA learns your patterns, the service gets faster and more accurate — no micromanaging from you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="included">
+    <div class="section-inner">
+      <p class="section-label centered">What InboxAxis Handles</p>
+      <h2 class="centered">Everything. So You Don't Have To.</h2>
+      <div class="included-grid">
+        <div class="included-item">
+          <span class="included-check">✓</span>
+          <div>
+            <strong>Inbox triage</strong> — every email sorted and prioritized daily
           </div>
         </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <div class="step-content">
-            <h3>We Build It</h3>
-            <p>Our team sets up your custom AI automations — fully configured and tested.</p>
+        <div class="included-item">
+          <span class="included-check">✓</span>
+          <div>
+            <strong>Response drafting</strong> — replies written in your voice and sent for approval or directly
           </div>
         </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <div class="step-content">
-            <h3>You Approve & Launch</h3>
-            <p>Review everything, request changes, then flip the switch. We monitor and tune continuously.</p>
+        <div class="included-item">
+          <span class="included-check">✓</span>
+          <div>
+            <strong>Spam & cold outreach removal</strong> — gone before you see it
+          </div>
+        </div>
+        <div class="included-item">
+          <span class="included-check">✓</span>
+          <div>
+            <strong>Newsletter management</strong> — digests delivered, subscriptions managed
+          </div>
+        </div>
+        <div class="included-item">
+          <span class="included-check">✓</span>
+          <div>
+            <strong>Folder & label organization</strong> — a clean system built for you
+          </div>
+        </div>
+        <div class="included-item">
+          <span class="included-check">✓</span>
+          <div>
+            <strong>VIP contact tracking</strong> — key people never fall through the cracks
+          </div>
+        </div>
+        <div class="included-item">
+          <span class="included-check">✓</span>
+          <div>
+            <strong>Follow-up reminders</strong> — pending items flagged so you close loops
+          </div>
+        </div>
+        <div class="included-item">
+          <span class="included-check">✓</span>
+          <div>
+            <strong>Daily briefing report</strong> — a clear summary delivered every morning
+          </div>
+        </div>
+        <div class="included-item">
+          <span class="included-check">✓</span>
+          <div>
+            <strong>Onboarding & SOP setup</strong> — your preferences documented from day one
+          </div>
+        </div>
+        <div class="included-item">
+          <span class="included-check">✓</span>
+          <div>
+            <strong>Quality-checked team</strong> — vetted, trained, and managed — not freelancers
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOCIAL PROOF -->
-  <section class="section section-testimonials">
-    <div class="container">
-      <div class="section-label">Early Feedback</div>
-      <h2>What Beta Users Are Saying</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"FlowMind set up an AI that handles all my new client inquiries. I used to spend 2 hours a day on this. Now it's zero."</p>
-          <div class="testimonial-author">
-            <img src="https://i.pravatar.cc/48?img=12" alt="" />
-            <div>
-              <strong>Marcus T.</strong>
-              <span>HVAC Business Owner, Texas</span>
-            </div>
+  <!-- BETA ACCESS -->
+  <section class="beta-access">
+    <div class="section-inner">
+      <div class="beta-banner">
+        <div class="beta-left">
+          <div class="beta-badge-large">
+            <span class="beta-star">★</span> FOUNDING MEMBER
           </div>
+          <h2>This Is Not a Discount. It's an Invitation.</h2>
+          <p>Beta members aren't guinea pigs — they're the first clients we serve at full capacity, with extra white-glove attention that later clients won't receive. You get the service at full price, plus:</p>
+          <ul class="beta-perks">
+            <li><span class="perk-icon">🎁</span> <strong>Free Inbox Audit</strong> — a professional review of your current email setup and workflows before we start</li>
+            <li><span class="perk-icon">🔒</span> <strong>Priority Onboarding</strong> — direct access to our founder during setup, not just support staff</li>
+            <li><span class="perk-icon">📞</span> <strong>Monthly Strategy Call</strong> — 30-min call to refine your inbox system as your business grows (beta period only)</li>
+            <li><span class="perk-icon">🏅</span> <strong>Founding Member Status</strong> — locked-in pricing if we raise rates after beta</li>
+          </ul>
         </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"I was skeptical AI could understand my salon's brand. They nailed it. My no-show rate dropped from 30% to 6% in the first month."</p>
-          <div class="testimonial-author">
-            <img src="https://i.pravatar.cc/48?img=25" alt="" />
-            <div>
-              <strong>Priya S.</strong>
-              <span>Salon Owner, Atlanta</span>
+        <div class="beta-right">
+          <div class="spots-card">
+            <div class="spots-header">Beta Cohort 1</div>
+            <div class="spots-count">3</div>
+            <div class="spots-label">Total spots available</div>
+            <div class="spots-bar">
+              <div class="spots-fill" style="width: 33%"></div>
             </div>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Finally — AI that actually works for a small business like mine. It feels like I hired three extra people for a fraction of the cost."</p>
-          <div class="testimonial-author">
-            <img src="https://i.pravatar.cc/48?img=33" alt="" />
-            <div>
-              <strong>Derek W.</strong>
-              <span>Roofing Contractor, Ohio</span>
-            </div>
+            <div class="spots-note">1 of 3 spots reserved</div>
+            <a href="#waitlist" class="btn-primary full-width">Reserve My Spot</a>
+            <p class="spots-fine">No commitment required. We'll reach out to confirm.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PRICING TEASER -->
-  <section class="section section-pricing">
-    <div class="container">
-      <div class="section-label">Pricing</div>
-      <h2>Simple, Flat Monthly Pricing</h2>
-      <p class="section-sub">No per-seat fees. No usage limits. One price that covers setup, management, and ongoing support.</p>
-      <div class="pricing-cards">
-        <div class="pricing-card">
-          <div class="pricing-tier">Starter</div>
-          <div class="pricing-price">$297<span>/mo</span></div>
-          <div class="pricing-desc">1-2 automations, perfect for solopreneurs</div>
-          <ul>
-            <li>✓ 1 custom AI automation</li>
-            <li>✓ Setup + onboarding included</li>
-            <li>✓ Monthly tuning & support</li>
-            <li>✓ Connect up to 3 apps</li>
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="section-inner">
+      <p class="section-label centered">Simple, Transparent Pricing</p>
+      <h2 class="centered">A Real Team for a Fraction of a Full-Time Hire</h2>
+      <p class="section-sub centered">All plans include a dedicated VA, AI-enhanced tools, daily management, and a morning briefing. No contracts. Cancel anytime.</p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="price-tier">Essential</div>
+          <div class="price-amount">$597<span>/mo</span></div>
+          <div class="price-desc">For solopreneurs and consultants with a single primary inbox</div>
+          <ul class="price-features">
+            <li>1 email inbox managed</li>
+            <li>Daily triage & organization</li>
+            <li>Spam & noise removal</li>
+            <li>Morning briefing report</li>
+            <li>Up to 10 response drafts/week</li>
+            <li>Standard onboarding</li>
           </ul>
-          <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
+          <a href="#waitlist" class="btn-outline">Join Waitlist</a>
         </div>
-        <div class="pricing-card pricing-card-featured">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-tier">Growth</div>
-          <div class="pricing-price">$597<span>/mo</span></div>
-          <div class="pricing-desc">Full automation stack for growing businesses</div>
-          <ul>
-            <li>✓ Up to 5 custom automations</li>
-            <li>✓ Priority setup (5 days)</li>
-            <li>✓ Weekly performance reports</li>
-            <li>✓ Unlimited app integrations</li>
-            <li>✓ Dedicated account manager</li>
+
+        <div class="price-card featured">
+          <div class="popular-badge">Most Popular</div>
+          <div class="price-tier">Professional</div>
+          <div class="price-amount">$997<span>/mo</span></div>
+          <div class="price-desc">For executives and business owners who need full inbox ownership</div>
+          <ul class="price-features">
+            <li>Up to 2 inboxes managed</li>
+            <li>Full daily management</li>
+            <li>Unlimited response drafts</li>
+            <li>VIP contact tracking</li>
+            <li>Follow-up & task flags</li>
+            <li>Priority onboarding + audit</li>
+            <li>Monthly check-in call</li>
           </ul>
-          <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
+          <a href="#waitlist" class="btn-primary">Join Waitlist</a>
         </div>
-        <div class="pricing-card">
-          <div class="pricing-tier">Scale</div>
-          <div class="pricing-price">$1,297<span>/mo</span></div>
-          <div class="pricing-desc">Enterprise-grade automation for scaling teams</div>
-          <ul>
-            <li>✓ Unlimited automations</li>
-            <li>✓ Custom AI model training</li>
-            <li>✓ Team-wide rollout</li>
-            <li>✓ SLA + dedicated engineer</li>
+
+        <div class="price-card">
+          <div class="price-tier">Executive</div>
+          <div class="price-amount">$1,797<span>/mo</span></div>
+          <div class="price-desc">For founders and C-suite with high-volume, multi-account needs</div>
+          <ul class="price-features">
+            <li>Up to 4 inboxes managed</li>
+            <li>Extended daily coverage hours</li>
+            <li>Calendar coordination support</li>
+            <li>Custom workflows & automations</li>
+            <li>Weekly strategy briefing</li>
+            <li>Dedicated account manager</li>
+            <li>Slack / direct line access</li>
           </ul>
-          <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
+          <a href="#waitlist" class="btn-outline">Join Waitlist</a>
         </div>
       </div>
-      <p class="pricing-note">🎁 Early waitlist members get 50% off their first 3 months.</p>
+
+      <p class="pricing-note">All beta members receive a <strong>Free Inbox Audit</strong> ($250 value) included with any plan. Beta pricing is locked in for the life of your account.</p>
+    </div>
+  </section>
+
+  <!-- TRUST / WHO IS THIS FOR -->
+  <section class="who-its-for">
+    <div class="section-inner">
+      <p class="section-label centered">Who InboxAxis Is Built For</p>
+      <h2 class="centered">If Email Is Stealing Your Focus, This Is For You</h2>
+      <div class="persona-grid">
+        <div class="persona-card">
+          <div class="persona-icon">👔</div>
+          <h4>Founders & CEOs</h4>
+          <p>You're running a company, not a mail room. Reclaim 2+ hours a day for the work only you can do.</p>
+        </div>
+        <div class="persona-card">
+          <div class="persona-icon">💼</div>
+          <h4>Consultants & Coaches</h4>
+          <p>Client communication is critical — but sorting through noise shouldn't be your job. We handle it.</p>
+        </div>
+        <div class="persona-card">
+          <div class="persona-icon">🏘️</div>
+          <h4>Real Estate Professionals</h4>
+          <p>High-volume inboxes, time-sensitive leads, multiple accounts — we keep you responsive without the chaos.</p>
+        </div>
+        <div class="persona-card">
+          <div class="persona-icon">⚖️</div>
+          <h4>Lawyers & Professionals</h4>
+          <p>Confidentiality-conscious service for high-stakes inboxes where nothing can fall through the cracks.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- WAITLIST FORM -->
-  <section class="section section-waitlist" id="waitlist">
-    <div class="container container-sm">
-      <div class="section-label">Waitlist</div>
-      <h2>Get Early Access to FlowMind AI</h2>
-      <p class="section-sub">We're onboarding businesses in batches. Join now to lock in your early-access discount and be first in line.</p>
-
-      <form class="waitlist-form" id="waitlistForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" required />
-          </div>
+  <section class="waitlist" id="waitlist">
+    <div class="section-inner narrow">
+      <div class="waitlist-box">
+        <div class="waitlist-badge">
+          <span class="badge-dot pulse"></span>
+          Beta Waitlist — Open Now
         </div>
-        <div class="form-row">
+        <h2>Claim Your Founding Member Spot</h2>
+        <p>Join the waitlist and we'll reach out personally within 48 hours. No commitment, no credit card — just your name, role, and the inbox nightmare you're ready to end.</p>
+
+        <form class="waitlist-form" id="waitlistForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+            </div>
+          </div>
           <div class="form-group">
-            <label for="business">Business Type</label>
-            <select id="business" name="business" required>
-              <option value="" disabled selected>Select your industry</option>
-              <option>Home Services (HVAC, Plumbing, Roofing, etc.)</option>
-              <option>Health & Wellness (Salon, Spa, Clinic)</option>
-              <option>Real Estate</option>
-              <option>E-commerce / Retail</option>
-              <option>Professional Services (Accounting, Legal, Consulting)</option>
-              <option>Restaurant / Food & Beverage</option>
-              <option>Fitness / Personal Training</option>
-              <option>Agency / Marketing</option>
-              <option>Other</option>
+            <label for="email">Business Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@yourcompany.com" required />
+          </div>
+          <div class="form-group">
+            <label for="role">Your Role / Business</label>
+            <input type="text" id="role" name="role" placeholder="Founder @ Acme Inc." required />
+          </div>
+          <div class="form-group">
+            <label for="plan">Plan You're Interested In</label>
+            <select id="plan" name="plan">
+              <option value="">Select a plan...</option>
+              <option value="essential">Essential — $597/mo</option>
+              <option value="professional">Professional — $997/mo (Most Popular)</option>
+              <option value="executive">Executive — $1,797/mo</option>
+              <option value="unsure">Not sure yet — help me decide</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="size">Business Size</label>
-            <select id="size" name="size" required>
-              <option value="" disabled selected>Number of employees</option>
-              <option>Solo / Just me</option>
-              <option>2–5 people</option>
-              <option>6–20 people</option>
-              <option>21–50 people</option>
-              <option>50+ people</option>
-            </select>
+            <label for="pain">What's your biggest inbox headache right now?</label>
+            <textarea id="pain" name="pain" rows="3" placeholder="e.g. I spend 3 hours a day on email and still miss important messages..."></textarea>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="pain">What's your #1 time-wasting task right now?</label>
-          <textarea id="pain" name="pain" rows="3" placeholder="e.g. Answering the same customer questions over and over, following up with leads, creating quotes..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-full">
-          <span class="btn-text">Reserve My Spot →</span>
-          <span class="btn-loading" style="display:none">Saving your spot...</span>
-        </button>
-      </form>
+          <button type="submit" class="btn-primary full-width large">
+            Reserve My Beta Spot <span class="btn-arrow">→</span>
+          </button>
+          <p class="form-fine">No credit card required. We'll contact you within 48 hours to confirm your spot and schedule your free onboarding audit.</p>
+        </form>
 
-      <!-- Success state -->
-      <div class="waitlist-success" id="waitlistSuccess" style="display:none">
-        <div class="success-icon">🎉</div>
-        <h3>You're on the list!</h3>
-        <p>We'll be in touch within 48 hours with your early access details. Check your inbox (and spam, just in case).</p>
-        <p class="success-share">Know another business owner who needs this? <button class="btn-link" onclick="shareWaitlist()">Share FlowMind AI →</button></p>
+        <div class="success-message" id="successMessage" style="display:none;">
+          <div class="success-icon">🎉</div>
+          <h3>You're on the list!</h3>
+          <p>We'll reach out within 48 hours to confirm your beta spot and schedule your free inbox audit. Watch your inbox — the irony is not lost on us.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section section-faq">
-    <div class="container container-sm">
-      <div class="section-label">FAQ</div>
-      <h2>Common Questions</h2>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>Do I need any technical skills?</summary>
-          <p>None at all. We handle everything — setup, configuration, testing, and ongoing management. You just tell us what you need and we build it.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How is this different from using ChatGPT myself?</summary>
-          <p>ChatGPT is a tool — you still have to use it manually every time. FlowMind AI builds automations that run on their own 24/7, connect to your real business systems, and are customized specifically for how your business works.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What apps and tools does it work with?</summary>
-          <p>We integrate with 100+ platforms including Gmail, Outlook, Google Calendar, WhatsApp, SMS, Stripe, QuickBooks, Xero, HubSpot, Salesforce, Shopify, and many more. If you use it, we can probably connect to it.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How long does setup take?</summary>
-          <p>Most clients are fully live within 5 business days of their discovery call. Complex setups may take up to 2 weeks.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Is there a contract?</summary>
-          <p>No long-term contracts. All plans are month-to-month and you can cancel anytime. We keep your business by getting results, not locking you in.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What's the early access discount?</summary>
-          <p>Waitlist members get 50% off their first 3 months on any plan. That's up to $1,941 in savings. The discount is locked in as long as you stay subscribed.</p>
-        </details>
-      </div>
-    </div>
-  </section>
+  <section class="faq">
+    <div class="section-inner narrow">
+      <p class="section-label centered">Common Questions</p>
+      <h2 class="centered">Everything You're Wondering</h2>
 
-  <!-- FINAL CTA -->
-  <section class="section section-final-cta">
-    <div class="container container-sm text-center">
-      <h2>Your Competitors Are Already Automating.<br />Don't Get Left Behind.</h2>
-      <p>Join 2,400+ business owners who've already claimed their spot. Early access closes when we hit capacity.</p>
-      <a href="#waitlist" class="btn btn-primary btn-lg">Join the Waitlist Now →</a>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Who are the virtual assistants? Are they vetted?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            Our VAs are sourced, vetted, trained, and fully managed by a professional Filipino VA agency. We don't hire off freelancer marketplaces — every VA goes through background checks, skill assessments, and inbox management training before being placed. The agency handles all replacements, quality control, and SOPs so the service never skips a beat.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Is my inbox access secure and confidential?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            Yes. We use secure, audited access protocols and NDAs are signed before any VA touches your inbox. Access is scoped to email management only and can be revoked at any time. For high-sensitivity professionals (legal, medical, finance), we offer additional confidentiality protocols.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What if I don't like the service or want to cancel?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            No contracts, no lock-ins. Cancel with 30 days notice. We're confident in the service — but you should never feel trapped. Beta members who lock in founding pricing keep that rate as long as they remain active clients.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How long does onboarding take?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            Most clients are fully onboarded within 3–5 business days. We start with a free inbox audit, then document your preferences and communication style. Your VA is briefed and operational by the end of week one. Beta clients get priority onboarding and direct founder access during setup.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What email platforms do you support?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            We support Gmail, Google Workspace, Outlook, and Microsoft 365 out of the box. Other platforms supported on request — reach out on your waitlist application and we'll confirm compatibility.
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What does "AI-enhanced" actually mean?
+            <span class="faq-arrow">↓</span>
+          </button>
+          <div class="faq-a">
+            Our VAs use AI tools to assist with draft writing, categorization, tone matching, and summarization — but a human reviews and approves every action. AI speeds up the work; humans ensure the quality and context. You get the accuracy of human judgment and the speed of AI, together.
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
+    <div class="footer-inner">
+      <div class="footer-logo">
         <div class="logo">
-          <span class="logo-icon">⚡</span>
-          <span class="logo-text">FlowMind <span class="logo-ai">AI</span></span>
+          <div class="logo-mark">
+            <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+              <rect width="28" height="28" rx="7" fill="#2563EB"/>
+              <path d="M5 9.5L14 15.5L23 9.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <rect x="5" y="8" width="18" height="13" rx="2" stroke="white" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="8" r="4" fill="#10B981"/>
+            </svg>
+          </div>
+          <span class="logo-text">Inbox<span class="logo-accent">Axis</span></span>
         </div>
-        <div class="footer-links">
-          <a href="mailto:hello@flowmindai.com">hello@flowmindai.com</a>
-          <span>·</span>
-          <a href="#waitlist">Privacy Policy</a>
-          <span>·</span>
-          <a href="#waitlist">Terms of Service</a>
-        </div>
-        <p class="footer-copy">© 2026 FlowMind AI. All rights reserved.</p>
+        <p>Done-for-you email & inbox management. Real humans, AI-enhanced, stress-free.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#waitlist">Join Waitlist</a>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 InboxAxis. All rights reserved.</p>
+        <p>Privacy-first. NDAs signed with every engagement.</p>
       </div>
     </div>
   </footer>
