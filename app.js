@@ -9,42 +9,40 @@ form.addEventListener('submit', async (e) => {
   btnText.style.display = 'none';
   btnLoading.style.display = 'inline';
 
-  // Collect form data
   const data = {
     name: form.name.value,
     email: form.email.value,
-    business: form.business.value,
-    size: form.size.value,
+    role: form.role.value,
+    volume: form.volume.value,
+    email_client: form.email_client.value,
     pain: form.pain.value,
     timestamp: new Date().toISOString(),
   };
 
-  // Store locally (replace with your API/Airtable/Mailchimp endpoint)
-  const existing = JSON.parse(localStorage.getItem('flowmind_waitlist') || '[]');
+  // Store locally — replace with your API/Airtable/Mailchimp endpoint
+  const existing = JSON.parse(localStorage.getItem('inboxdone_waitlist') || '[]');
   existing.push(data);
-  localStorage.setItem('flowmind_waitlist', JSON.stringify(existing));
+  localStorage.setItem('inboxdone_waitlist', JSON.stringify(existing));
 
-  // Simulate network delay for realism
   await new Promise((r) => setTimeout(r, 1200));
 
-  // Show success
   form.style.display = 'none';
   success.style.display = 'block';
   success.scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 
 function shareWaitlist() {
-  const text = "I just joined the waitlist for FlowMind AI — AI automation for small businesses. Get 50% off early access 👇";
+  const text = "I just joined the waitlist for InboxDone — human VA + AI inbox management that actually works. Get 40% off early access:";
   const url = window.location.href;
   if (navigator.share) {
-    navigator.share({ title: 'FlowMind AI', text, url }).catch(() => {});
+    navigator.share({ title: 'InboxDone', text, url }).catch(() => {});
   } else {
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text + ' ' + url)}`;
     window.open(twitterUrl, '_blank');
   }
 }
 
-// Smooth scroll for all anchor links
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (e) => {
     const target = document.querySelector(link.getAttribute('href'));
@@ -55,7 +53,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-// Animate elements on scroll
+// Fade-in on scroll
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -65,12 +63,14 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 }
+  { threshold: 0.08 }
 );
 
-document.querySelectorAll('.feature-card, .problem-card, .step, .testimonial-card, .pricing-card, .faq-item').forEach((el) => {
+document.querySelectorAll(
+  '.feature-card, .problem-card, .step, .testimonial-card, .pricing-card, .faq-item, .split-col'
+).forEach((el) => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
+  el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
 });
