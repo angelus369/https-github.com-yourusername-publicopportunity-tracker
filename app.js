@@ -9,42 +9,40 @@ form.addEventListener('submit', async (e) => {
   btnText.style.display = 'none';
   btnLoading.style.display = 'inline';
 
-  // Collect form data
   const data = {
     name: form.name.value,
     email: form.email.value,
-    business: form.business.value,
-    size: form.size.value,
-    pain: form.pain.value,
+    website: form.website.value,
+    role: form.role.value,
+    traffic: form.traffic.value,
+    problem: form.problem.value,
     timestamp: new Date().toISOString(),
   };
 
-  // Store locally (replace with your API/Airtable/Mailchimp endpoint)
-  const existing = JSON.parse(localStorage.getItem('flowmind_waitlist') || '[]');
+  // Store locally — replace with your API endpoint (Airtable, ConvertKit, Mailchimp, etc.)
+  const existing = JSON.parse(localStorage.getItem('surfaced_waitlist') || '[]');
   existing.push(data);
-  localStorage.setItem('flowmind_waitlist', JSON.stringify(existing));
+  localStorage.setItem('surfaced_waitlist', JSON.stringify(existing));
 
-  // Simulate network delay for realism
   await new Promise((r) => setTimeout(r, 1200));
 
-  // Show success
   form.style.display = 'none';
   success.style.display = 'block';
   success.scrollIntoView({ behavior: 'smooth', block: 'center' });
 });
 
 function shareWaitlist() {
-  const text = "I just joined the waitlist for FlowMind AI — AI automation for small businesses. Get 50% off early access 👇";
+  const text = 'I just joined the Surfaced waitlist — the first platform to get your business cited by ChatGPT, Perplexity & Google AI. 40% off early access 👇';
   const url = window.location.href;
   if (navigator.share) {
-    navigator.share({ title: 'FlowMind AI', text, url }).catch(() => {});
+    navigator.share({ title: 'Surfaced — AEO Platform', text, url }).catch(() => {});
   } else {
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
     window.open(twitterUrl, '_blank');
   }
 }
 
-// Smooth scroll for all anchor links
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener('click', (e) => {
     const target = document.querySelector(link.getAttribute('href'));
@@ -55,7 +53,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
   });
 });
 
-// Animate elements on scroll
+// Scroll-in animations
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -68,9 +66,19 @@ const observer = new IntersectionObserver(
   { threshold: 0.1 }
 );
 
-document.querySelectorAll('.feature-card, .problem-card, .step, .testimonial-card, .pricing-card, .faq-item').forEach((el) => {
+document.querySelectorAll(
+  '.feature-card, .problem-card, .step, .testimonial-card, .pricing-card, .faq-item, .who-card, .stat'
+).forEach((el) => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   observer.observe(el);
 });
+
+// Live waitlist counter with slight random drift to feel real
+const proofEl = document.querySelector('.hero-proof strong');
+if (proofEl) {
+  const base = 3100;
+  const drift = Math.floor(Math.random() * 80);
+  proofEl.textContent = (base + drift).toLocaleString() + '+';
+}
