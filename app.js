@@ -82,3 +82,16 @@ if (proofEl) {
   const drift = Math.floor(Math.random() * 80);
   proofEl.textContent = (base + drift).toLocaleString() + '+';
 }
+
+// Founding member spots counter
+// Replace FOUNDING_TAKEN with your real count from your backend/Airtable
+const FOUNDING_TOTAL = 25;
+const FOUNDING_TAKEN = 2; // update this as real signups come in
+const spotsLeftEl = document.getElementById('spotsLeft');
+const fillEl = document.getElementById('foundingFill');
+if (spotsLeftEl && fillEl) {
+  const remaining = FOUNDING_TOTAL - FOUNDING_TAKEN;
+  spotsLeftEl.textContent = remaining;
+  const pctFilled = (FOUNDING_TAKEN / FOUNDING_TOTAL) * 100;
+  setTimeout(() => { fillEl.style.width = pctFilled + '%'; }, 300);
+}

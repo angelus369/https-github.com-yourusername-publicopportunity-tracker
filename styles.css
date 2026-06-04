@@ -386,6 +386,66 @@ p  { color: var(--text2); }
 .pricing-note { margin-top: 28px; font-size: 0.9rem; color: var(--text2); }
 .pricing-note strong { color: var(--text); }
 
+/* ─── FOUNDING BAR ─── */
+.founding-bar {
+  background: linear-gradient(135deg, #1a1630 0%, #1c1f38 100%);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: 20px 28px;
+  margin: 40px 0 0;
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+.founding-bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.founding-left { display: flex; align-items: center; gap: 16px; }
+.founding-fire { font-size: 1.6rem; }
+.founding-title { font-weight: 700; font-size: 0.95rem; color: var(--text); margin-bottom: 2px; }
+.founding-sub { font-size: 0.78rem; color: var(--text2); }
+.founding-right { text-align: right; min-width: 160px; }
+.founding-count { font-size: 1.3rem; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.founding-count span#spotsLeft { color: var(--accent); font-size: 1.6rem; }
+.founding-of { font-size: 0.78rem; color: var(--text3); font-weight: 400; }
+.founding-bar-track {
+  height: 6px;
+  background: var(--border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.founding-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--cyan));
+  border-radius: 100px;
+  transition: width 0.8s ease;
+}
+
+/* Pricing tier notes */
+.pricing-tiers-note {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pricing-tier-note-item {
+  font-size: 0.85rem;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+}
+.pricing-tier-note-item.founding {
+  background: rgba(124, 111, 255, 0.1);
+  border: 1px solid rgba(124, 111, 255, 0.3);
+  color: var(--text2);
+}
+.pricing-tier-note-item.founding strong { color: var(--accent); }
+.pricing-tier-note-item.waitlist {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text2);
+}
+.pricing-tier-note-item.waitlist strong { color: var(--text); }
+
 /* ─── WAITLIST ─── */
 .section-waitlist { background: var(--bg2); text-align: center; }
 .section-waitlist h2 { margin-bottom: 8px; }
