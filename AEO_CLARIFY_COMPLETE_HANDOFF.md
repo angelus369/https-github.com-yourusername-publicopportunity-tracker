@@ -425,15 +425,18 @@ Every tool evaluated against: minimum 4.0 star rating, direct alignment with AEO
 **Logo:** FINAL — LOCKED BY FOUNDER. Transparent background.
 
 **Logo description — exact for any designer or Manus:**
-- Icon on the left: the letter A as the primary mark, with a search/magnify element built into the bottom O, speed lines on the left suggesting velocity and real-time motion, a three-dot network node graphic on the right suggesting AI signals and the six engines connecting to a brand, and a speech bubble arc wrapping the full icon suggesting AI answers
-- "AEO" text to the right of the icon in primary blue `#368BC1`, bold weight
-- "Clarify" text below "AEO" in dark navy `#0f172a`, lighter weight
+- Icon on the left: the letter A as the primary mark in dark navy, inside a circular arc (signal tower / broadcast antenna concept)
+- A cyan-to-white gradient data stream flows upward through the center of the A — circuit board dots and lines suggesting data transmission and AI signal broadcasting
+- Signal arc lines radiate from the upper left of the circle in cyan, suggesting broadcast reach
+- Small cyan dot nodes on the signal arc lines
+- "AEO" text to the right of the icon in dark navy, bold weight, with a small cyan triangle as the crossbar of the A in "AEO"
+- "Clarify" text on the same line as "AEO" in dark navy, lighter weight
 - Transparent background
-- Colors in logo: `#368BC1` (blue), `#0f172a` (navy), small neutral gray/teal nodes in the network graphic only
+- Colors in logo: dark navy (primary structure), cyan/light blue gradient (data stream and signal arcs), white (data stream highlights)
 
-**What the logo communicates:** Search + AI signals + speed + answers. The entire business in one mark.
+**What the logo communicates:** Signal broadcasting + data transmission + AI reach. The brand is sending its signal to every AI engine simultaneously.
 
-**Status:** Founder reviewed multiple versions and locked this one. Do not change it.
+**Status:** Founder reviewed multiple versions. This blue signal tower version was selected and locked. Do not change it.
 
 ---
 
