@@ -422,9 +422,18 @@ Every tool evaluated against: minimum 4.0 star rating, direct alignment with AEO
 
 **Typography:** Inter, Google Fonts. Weights: 400 (body), 500 (labels), 600 (subheadings), 700 (headings), 800 (hero).
 
-**Logo:** Compass icon in `#368BC1`. Transparent background. No other colors in the logo. The founder confirmed `#368BC1` is the correct blue.
+**Logo:** FINAL — LOCKED BY FOUNDER. Transparent background.
 
-**Logo history:** Three versions were reviewed. The third version — a cleaner flat compass — was selected. The founder confirmed the color and said "moving on."
+**Logo description — exact for any designer or Manus:**
+- Icon on the left: the letter A as the primary mark, with a search/magnify element built into the bottom O, speed lines on the left suggesting velocity and real-time motion, a three-dot network node graphic on the right suggesting AI signals and the six engines connecting to a brand, and a speech bubble arc wrapping the full icon suggesting AI answers
+- "AEO" text to the right of the icon in primary blue `#368BC1`, bold weight
+- "Clarify" text below "AEO" in dark navy `#0f172a`, lighter weight
+- Transparent background
+- Colors in logo: `#368BC1` (blue), `#0f172a` (navy), small neutral gray/teal nodes in the network graphic only
+
+**What the logo communicates:** Search + AI signals + speed + answers. The entire business in one mark.
+
+**Status:** Founder reviewed multiple versions and locked this one. Do not change it.
 
 ---
 
