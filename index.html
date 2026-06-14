@@ -3,186 +3,463 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FlowMind AI — Your Business on Autopilot</title>
-  <meta name="description" content="FlowMind AI handles your repetitive business tasks with custom AI automation — no tech skills needed. Join the waitlist." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>PlateMate AI — Meal Planning Built for GLP-1 Users</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              900: '#14532d',
+            },
+            accent: {
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .gradient-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1a2e1a 50%, #0f172a 100%);
+    }
+
+    .card-glow {
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.15), 0 4px 24px rgba(34,197,94,0.08);
+    }
+
+    .pill-badge {
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.3);
+    }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(24px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    .animate-fade-up { animation: fadeUp 0.6s ease both; }
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-400 { animation-delay: 0.4s; }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.25), 0 8px 32px rgba(34,197,94,0.12);
+    }
+    .feature-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+
+    input[type="email"]:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(34,197,94,0.3);
+    }
+
+    .counter-number {
+      background: linear-gradient(135deg, #22c55e, #4ade80);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .ticker-bar {
+      animation: ticker 25s linear infinite;
+    }
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .waitlist-form-bg {
+      background: linear-gradient(135deg, #052e16 0%, #0f172a 60%, #052e16 100%);
+    }
+
+    .noise-overlay {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      position:absolute; inset:0; pointer-events:none;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-slate-950 text-white font-sans antialiased">
 
   <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="logo">
-        <span class="logo-icon">⚡</span>
-        <span class="logo-text">FlowMind <span class="logo-ai">AI</span></span>
+  <nav class="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur-md bg-slate-950/80">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">&#x1F957;</span>
+        <span class="font-bold text-lg tracking-tight">
+          Plate<span class="text-brand-500">Mate</span> <span class="text-white/40 font-light text-sm">AI</span>
+        </span>
       </div>
-      <a href="#waitlist" class="btn btn-sm">Join Waitlist</a>
+      <a href="#waitlist"
+         class="hidden sm:inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors">
+        Join Waitlist &rarr;
+      </a>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="badge">🚀 Now accepting early access applications</div>
-    <h1>Stop Doing Work<br /><span class="gradient-text">AI Can Do For You</span></h1>
-    <p class="hero-sub">
-      FlowMind AI builds and manages custom AI automations for your business —
-      follow-ups, bookings, invoices, customer replies, and more.
-      <strong>You focus on growth. We handle the rest.</strong>
-    </p>
-    <div class="hero-cta">
-      <a href="#waitlist" class="btn btn-primary btn-lg">Get Early Access — Free</a>
-      <span class="hero-cta-note">Limited spots · No credit card required</span>
+  <!-- TICKER -->
+  <div class="mt-16 overflow-hidden bg-brand-600/10 border-b border-brand-500/10 py-2.5 text-xs text-brand-400 font-medium whitespace-nowrap">
+    <div class="flex ticker-bar">
+      <span class="inline-flex gap-12 pr-12">
+        <span>&#x1F525; 15 million Americans on GLP-1 medications</span>
+        <span>&#x1F48A; Ozempic &middot; Wegovy &middot; Mounjaro &middot; Zepbound</span>
+        <span>&#x1F62E; 70% report not knowing what to eat on GLP-1s</span>
+        <span>&#x1F4C9; Muscle loss is the #1 unspoken risk on these drugs</span>
+        <span>&#x1F969; High-protein meals reduce muscle loss by up to 40%</span>
+        <span>&#x1F922; Nausea affects 44% of new GLP-1 users</span>
+        <span>&#x1F9E0; No meal planning app is built specifically for GLP-1 side effects</span>
+      </span>
+      <span class="inline-flex gap-12 pr-12" aria-hidden="true">
+        <span>&#x1F525; 15 million Americans on GLP-1 medications</span>
+        <span>&#x1F48A; Ozempic &middot; Wegovy &middot; Mounjaro &middot; Zepbound</span>
+        <span>&#x1F62E; 70% report not knowing what to eat on GLP-1s</span>
+        <span>&#x1F4C9; Muscle loss is the #1 unspoken risk on these drugs</span>
+        <span>&#x1F969; High-protein meals reduce muscle loss by up to 40%</span>
+        <span>&#x1F922; Nausea affects 44% of new GLP-1 users</span>
+        <span>&#x1F9E0; No meal planning app is built specifically for GLP-1 side effects</span>
+      </span>
     </div>
-    <div class="hero-proof">
-      <div class="avatars">
-        <img src="https://i.pravatar.cc/40?img=1" alt="" />
-        <img src="https://i.pravatar.cc/40?img=2" alt="" />
-        <img src="https://i.pravatar.cc/40?img=3" alt="" />
-        <img src="https://i.pravatar.cc/40?img=4" alt="" />
-        <img src="https://i.pravatar.cc/40?img=5" alt="" />
+  </div>
+
+  <!-- HERO -->
+  <section class="gradient-hero relative overflow-hidden">
+    <div class="noise-overlay"></div>
+    <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-brand-600/10 blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-brand-500/8 blur-3xl pointer-events-none"></div>
+
+    <div class="relative max-w-5xl mx-auto px-6 pt-20 pb-28 text-center">
+
+      <div class="inline-flex items-center gap-2 pill-badge rounded-full px-4 py-1.5 text-sm text-brand-400 font-medium mb-8 animate-fade-up">
+        <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse inline-block"></span>
+        Now accepting early access signups
       </div>
-      <span>Join <strong>2,400+</strong> business owners on the waitlist</span>
+
+      <h1 class="animate-fade-up delay-100 text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6">
+        Finally. Meal planning<br />
+        <span class="text-brand-500">designed for your</span><br />
+        GLP-1 journey.
+      </h1>
+
+      <p class="animate-fade-up delay-200 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+        PlateMate AI generates personalized weekly meal plans that work <em>with</em> Ozempic, Wegovy, and Mounjaro
+        &mdash; protecting your muscle, easing nausea, and making every small bite count.
+      </p>
+
+      <div class="animate-fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <a href="#waitlist"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-bold px-8 py-4 rounded-full text-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-brand-600/30">
+          Get Early Access &mdash; Free
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+        <a href="#how-it-works"
+           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-medium px-8 py-4 rounded-full text-lg transition-all">
+          See how it works
+        </a>
+      </div>
+
+      <div class="animate-fade-up delay-400 flex flex-wrap justify-center gap-10 text-center">
+        <div>
+          <p class="text-3xl font-black counter-number" id="hero-count">2,841</p>
+          <p class="text-sm text-slate-500 mt-1">people on the waitlist</p>
+        </div>
+        <div class="w-px bg-white/10 self-stretch hidden sm:block"></div>
+        <div>
+          <p class="text-3xl font-black counter-number">15M+</p>
+          <p class="text-sm text-slate-500 mt-1">Americans on GLP-1 drugs</p>
+        </div>
+        <div class="w-px bg-white/10 self-stretch hidden sm:block"></div>
+        <div>
+          <p class="text-3xl font-black counter-number">$0</p>
+          <p class="text-sm text-slate-500 mt-1">to join &mdash; forever free during beta</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PROBLEM -->
-  <section class="section section-problem">
-    <div class="container">
-      <div class="section-label">The Problem</div>
-      <h2>You Know AI Could Help. You Just Don't Have Time to Figure It Out.</h2>
-      <div class="problem-grid">
-        <div class="problem-card">
-          <div class="problem-icon">😩</div>
-          <p>Spending hours on repetitive tasks that feel impossible to delegate</p>
+  <section class="py-24 bg-slate-950">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-3">The Problem</p>
+        <h2 class="text-4xl sm:text-5xl font-black tracking-tight">
+          Generic meal apps don't understand<br/>
+          <span class="text-brand-500">what GLP-1s do to your body.</span>
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="bg-slate-900 border border-white/8 rounded-2xl p-6 card-glow feature-card">
+          <div class="text-3xl mb-4">&#x1F922;</div>
+          <h3 class="font-bold text-lg mb-2">Constant nausea, no guidance</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            GLP-1 drugs slow gastric emptying. Most foods feel wrong. Generic apps suggest
+            heavy salads and meals you can't stomach anymore.
+          </p>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">🤯</div>
-          <p>Tried AI tools but gave up — too complicated, too generic, no real results</p>
+        <div class="bg-slate-900 border border-white/8 rounded-2xl p-6 card-glow feature-card">
+          <div class="text-3xl mb-4">&#x1F4AA;</div>
+          <h3 class="font-bold text-lg mb-2">Losing muscle, not just fat</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Up to 40% of weight lost on GLP-1s can be lean muscle. No existing meal app
+            prioritizes the high-protein micro-meals your body now needs.
+          </p>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">💸</div>
-          <p>Can't afford a full team but can't keep doing everything yourself either</p>
+        <div class="bg-slate-900 border border-white/8 rounded-2xl p-6 card-glow feature-card">
+          <div class="text-3xl mb-4">&#x1F957;</div>
+          <h3 class="font-bold text-lg mb-2">Portion sizes are all wrong</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Your stomach now holds a fraction of what it used to. Every mainstream plan
+            serves portions 2&ndash;4x larger than what you can actually eat.
+          </p>
         </div>
-        <div class="problem-card">
-          <div class="problem-icon">⏰</div>
-          <p>Leads falling through the cracks while you're busy doing the actual work</p>
-        </div>
+      </div>
+
+      <div class="mt-12 bg-slate-900/60 border border-white/8 rounded-2xl p-8 text-center max-w-3xl mx-auto">
+        <p class="text-slate-300 text-xl italic leading-relaxed">
+          "I've tried MyFitnessPal, Noom, PlateJoy &mdash; none of them understand what it's like
+          to be on Wegovy. I can barely eat 600 calories and I'm still doing it wrong."
+        </p>
+        <p class="mt-4 text-slate-500 text-sm">&mdash; Sarah M., Wegovy user, lost 47 lbs but struggling with energy</p>
       </div>
     </div>
   </section>
 
   <!-- SOLUTION -->
-  <section class="section section-solution">
-    <div class="container">
-      <div class="section-label">The Solution</div>
-      <h2>We Build & Run Your AI Automation — Done For You</h2>
-      <p class="section-sub">FlowMind AI is a managed service. We learn your business, set up AI automations tailored to you, and keep them running. No software to learn. No prompts to write. Just results.</p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">💬</div>
-          <h3>AI Customer Reply Bot</h3>
-          <p>Answers inquiries 24/7 via email, SMS, or chat — in your voice — and books appointments automatically.</p>
+  <section class="py-24 bg-gradient-to-b from-slate-950 to-slate-900">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-3">The Solution</p>
+        <h2 class="text-4xl sm:text-5xl font-black tracking-tight">
+          PlateMate AI knows the<br/>
+          <span class="text-brand-500">GLP-1 rules of eating.</span>
+        </h2>
+        <p class="text-slate-400 mt-4 max-w-xl mx-auto text-lg">
+          We trained our AI on GLP-1 clinical nutrition guidelines so you don't have to
+          read 200 Reddit threads to figure out what to eat tonight.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+
+        <div class="bg-slate-900 border border-white/8 rounded-2xl p-7 feature-card">
+          <div class="w-10 h-10 rounded-xl bg-brand-600/20 flex items-center justify-center text-xl mb-5">&#x1F9E0;</div>
+          <h3 class="font-bold text-xl mb-2">GLP-1 Aware AI Engine</h3>
+          <p class="text-slate-400 leading-relaxed text-sm">
+            Tell us your medication, dose, and injection schedule. We auto-adjust macros,
+            textures, and timing around your peak nausea windows.
+          </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">📧</div>
-          <h3>Lead Follow-Up on Autopilot</h3>
-          <p>Never lose a lead again. Our AI follows up with prospects via personalized sequences until they convert or opt out.</p>
+
+        <div class="bg-slate-900 border border-white/8 rounded-2xl p-7 feature-card">
+          <div class="w-10 h-10 rounded-xl bg-brand-600/20 flex items-center justify-center text-xl mb-5">&#x1F969;</div>
+          <h3 class="font-bold text-xl mb-2">Muscle-First Meal Plans</h3>
+          <p class="text-slate-400 leading-relaxed text-sm">
+            Every plan hits 1g protein per lb of goal body weight, spread across micro-meals
+            your shrunken appetite can actually finish.
+          </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🧾</div>
-          <h3>Invoice & Quote Generation</h3>
-          <p>AI drafts professional quotes and invoices from a quick voice note or message — ready to send in seconds.</p>
+
+        <div class="bg-slate-900 border border-white/8 rounded-2xl p-7 feature-card">
+          <div class="w-10 h-10 rounded-xl bg-brand-600/20 flex items-center justify-center text-xl mb-5">&#x1F6D2;</div>
+          <h3 class="font-bold text-xl mb-2">One-Click Grocery Lists</h3>
+          <p class="text-slate-400 leading-relaxed text-sm">
+            Auto-generated grocery lists scaled to your household size. Integrates with
+            Instacart so you never over-buy food you won't eat.
+          </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">📅</div>
-          <h3>Smart Scheduling & Reminders</h3>
-          <p>Automated appointment reminders cut no-shows by up to 80%. Reschedules handled without lifting a finger.</p>
+
+        <div class="bg-slate-900 border border-white/8 rounded-2xl p-7 feature-card">
+          <div class="w-10 h-10 rounded-xl bg-brand-600/20 flex items-center justify-center text-xl mb-5">&#x1F504;</div>
+          <h3 class="font-bold text-xl mb-2">Swap &amp; Adapt in Seconds</h3>
+          <p class="text-slate-400 leading-relaxed text-sm">
+            Hated the meal? Feeling too sick? One tap swaps it for a GLP-1 safe alternative
+            that keeps your macros on track.
+          </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>Weekly Business Summaries</h3>
-          <p>Every Monday, get a plain-English AI summary of your revenue, leads, and what needs your attention.</p>
+
+        <div class="bg-slate-900 border border-white/8 rounded-2xl p-7 feature-card">
+          <div class="w-10 h-10 rounded-xl bg-brand-600/20 flex items-center justify-center text-xl mb-5">&#x1F4CA;</div>
+          <h3 class="font-bold text-xl mb-2">Weekly Progress Snapshots</h3>
+          <p class="text-slate-400 leading-relaxed text-sm">
+            Track protein, muscle-to-fat loss ratio, and energy trends week over week &mdash;
+            metrics your doctor actually cares about.
+          </p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔗</div>
-          <h3>Connects to Tools You Use</h3>
-          <p>Works with Google, Outlook, QuickBooks, Stripe, HubSpot, WhatsApp, and 100+ other apps you already use.</p>
+
+        <div class="bg-slate-900 border border-white/8 rounded-2xl p-7 feature-card">
+          <div class="w-10 h-10 rounded-xl bg-brand-600/20 flex items-center justify-center text-xl mb-5">&#x1F4AC;</div>
+          <h3 class="font-bold text-xl mb-2">24/7 Nutrition Chat</h3>
+          <p class="text-slate-400 leading-relaxed text-sm">
+            Ask anything, any time. "Can I eat sushi tonight?" "I feel sick &mdash; what's safe
+            right now?" Get instant, GLP-1 specific answers.
+          </p>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="section section-how">
-    <div class="container">
-      <div class="section-label">How It Works</div>
-      <h2>Up and Running in 5 Days</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <div class="step-content">
-            <h3>Discovery Call (30 min)</h3>
-            <p>We learn your business, your bottlenecks, and which tasks are eating your time.</p>
+  <section id="how-it-works" class="py-24 bg-slate-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-3">How It Works</p>
+        <h2 class="text-4xl sm:text-5xl font-black tracking-tight">
+          Up and eating right<br/>in under 3 minutes.
+        </h2>
+      </div>
+
+      <div class="space-y-6">
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-600 flex items-center justify-center font-black text-lg">1</div>
+          <div class="pt-1">
+            <h3 class="font-bold text-xl mb-1">Tell us your medication &amp; goals</h3>
+            <p class="text-slate-400">Which GLP-1, your dose, injection day, weight loss goal, and any food restrictions. Takes 90 seconds.</p>
           </div>
         </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <div class="step-content">
-            <h3>We Build It</h3>
-            <p>Our team sets up your custom AI automations — fully configured and tested.</p>
+        <div class="ml-6 border-l-2 border-dashed border-brand-600/30 h-8"></div>
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-600 flex items-center justify-center font-black text-lg">2</div>
+          <div class="pt-1">
+            <h3 class="font-bold text-xl mb-1">Get your personalized plan instantly</h3>
+            <p class="text-slate-400">Your first 7-day meal plan is ready in seconds &mdash; timed around your injection schedule, sized for your new appetite.</p>
           </div>
         </div>
-        <div class="step-arrow">→</div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <div class="step-content">
-            <h3>You Approve & Launch</h3>
-            <p>Review everything, request changes, then flip the switch. We monitor and tune continuously.</p>
+        <div class="ml-6 border-l-2 border-dashed border-brand-600/30 h-8"></div>
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-600 flex items-center justify-center font-black text-lg">3</div>
+          <div class="pt-1">
+            <h3 class="font-bold text-xl mb-1">Shop, cook, track, repeat</h3>
+            <p class="text-slate-400">Grocery list auto-generated. Recipes in 5 ingredients or fewer. The AI learns what you like and gets better every week.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOCIAL PROOF -->
-  <section class="section section-testimonials">
-    <div class="container">
-      <div class="section-label">Early Feedback</div>
-      <h2>What Beta Users Are Saying</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"FlowMind set up an AI that handles all my new client inquiries. I used to spend 2 hours a day on this. Now it's zero."</p>
-          <div class="testimonial-author">
-            <img src="https://i.pravatar.cc/48?img=12" alt="" />
+  <!-- COMPARISON TABLE -->
+  <section class="py-24 bg-slate-950">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-black tracking-tight">Why not just use <span class="text-slate-500">MyFitnessPal?</span></h2>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-white/8">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-slate-900 border-b border-white/8">
+              <th class="text-left px-6 py-4 font-semibold text-slate-400">Feature</th>
+              <th class="px-6 py-4 font-semibold text-slate-400 text-center">Generic Apps</th>
+              <th class="px-6 py-4 font-bold text-brand-400 text-center">PlateMate AI</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            <tr class="bg-slate-900/50">
+              <td class="px-6 py-4 text-slate-300">GLP-1 medication awareness</td>
+              <td class="px-6 py-4 text-center text-red-400">&#x2717; None</td>
+              <td class="px-6 py-4 text-center text-brand-400 font-semibold">&#x2713; Full</td>
+            </tr>
+            <tr class="bg-slate-900">
+              <td class="px-6 py-4 text-slate-300">Nausea-safe recipe filtering</td>
+              <td class="px-6 py-4 text-center text-red-400">&#x2717;</td>
+              <td class="px-6 py-4 text-center text-brand-400 font-semibold">&#x2713;</td>
+            </tr>
+            <tr class="bg-slate-900/50">
+              <td class="px-6 py-4 text-slate-300">Injection-day adjusted meal timing</td>
+              <td class="px-6 py-4 text-center text-red-400">&#x2717;</td>
+              <td class="px-6 py-4 text-center text-brand-400 font-semibold">&#x2713;</td>
+            </tr>
+            <tr class="bg-slate-900">
+              <td class="px-6 py-4 text-slate-300">Muscle-loss tracking &amp; alerts</td>
+              <td class="px-6 py-4 text-center text-red-400">&#x2717;</td>
+              <td class="px-6 py-4 text-center text-brand-400 font-semibold">&#x2713;</td>
+            </tr>
+            <tr class="bg-slate-900/50">
+              <td class="px-6 py-4 text-slate-300">Micro-meal portioning (600&ndash;900 cal/day)</td>
+              <td class="px-6 py-4 text-center text-red-400">&#x2717;</td>
+              <td class="px-6 py-4 text-center text-brand-400 font-semibold">&#x2713;</td>
+            </tr>
+            <tr class="bg-slate-900">
+              <td class="px-6 py-4 text-slate-300">AI chat tuned for GLP-1 questions</td>
+              <td class="px-6 py-4 text-center text-red-400">&#x2717;</td>
+              <td class="px-6 py-4 text-center text-brand-400 font-semibold">&#x2713;</td>
+            </tr>
+            <tr class="bg-slate-900/50">
+              <td class="px-6 py-4 text-slate-300">Price</td>
+              <td class="px-6 py-4 text-center text-slate-400">$10&ndash;$70/mo</td>
+              <td class="px-6 py-4 text-center text-brand-400 font-semibold">Free beta &rarr; $19/mo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-24 bg-slate-900">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-3">Early Testers Say</p>
+        <h2 class="text-4xl font-black tracking-tight">What beta users are telling us</h2>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="bg-slate-950 border border-white/8 rounded-2xl p-6 card-glow">
+          <div class="flex gap-1 mb-4 text-brand-500">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+          <p class="text-slate-300 text-sm leading-relaxed italic mb-5">
+            "Week 3 on Mounjaro. PlateMate is the first app that actually gets why I can only
+            eat 4 oz at a time. My protein is finally where it needs to be."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-xs font-bold">JR</div>
             <div>
-              <strong>Marcus T.</strong>
-              <span>HVAC Business Owner, Texas</span>
+              <p class="text-sm font-semibold">Jessica R.</p>
+              <p class="text-xs text-slate-500">Mounjaro 10mg &middot; 6 weeks in</p>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"I was skeptical AI could understand my salon's brand. They nailed it. My no-show rate dropped from 30% to 6% in the first month."</p>
-          <div class="testimonial-author">
-            <img src="https://i.pravatar.cc/48?img=25" alt="" />
+        <div class="bg-slate-950 border border-white/8 rounded-2xl p-6 card-glow">
+          <div class="flex gap-1 mb-4 text-brand-500">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+          <p class="text-slate-300 text-sm leading-relaxed italic mb-5">
+            "I was losing muscle fast. My trainer was worried. PlateMate's plans got
+            my protein up without making me feel sick. Down 31 lbs, keeping my muscle."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-xs font-bold">DK</div>
             <div>
-              <strong>Priya S.</strong>
-              <span>Salon Owner, Atlanta</span>
+              <p class="text-sm font-semibold">David K.</p>
+              <p class="text-xs text-slate-500">Wegovy 1.7mg &middot; 4 months in</p>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p>"Finally — AI that actually works for a small business like mine. It feels like I hired three extra people for a fraction of the cost."</p>
-          <div class="testimonial-author">
-            <img src="https://i.pravatar.cc/48?img=33" alt="" />
+        <div class="bg-slate-950 border border-white/8 rounded-2xl p-6 card-glow">
+          <div class="flex gap-1 mb-4 text-brand-500">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
+          <p class="text-slate-300 text-sm leading-relaxed italic mb-5">
+            "Injection days were the worst. PlateMate literally builds my Monday meal plan
+            around the fact that I feel terrible for 24 hours. Nobody else does that."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-xs font-bold">AM</div>
             <div>
-              <strong>Derek W.</strong>
-              <span>Roofing Contractor, Ohio</span>
+              <p class="text-sm font-semibold">Angela M.</p>
+              <p class="text-xs text-slate-500">Ozempic 1mg &middot; 3 months in</p>
             </div>
           </div>
         </div>
@@ -190,185 +467,184 @@
     </div>
   </section>
 
-  <!-- PRICING TEASER -->
-  <section class="section section-pricing">
-    <div class="container">
-      <div class="section-label">Pricing</div>
-      <h2>Simple, Flat Monthly Pricing</h2>
-      <p class="section-sub">No per-seat fees. No usage limits. One price that covers setup, management, and ongoing support.</p>
-      <div class="pricing-cards">
-        <div class="pricing-card">
-          <div class="pricing-tier">Starter</div>
-          <div class="pricing-price">$297<span>/mo</span></div>
-          <div class="pricing-desc">1-2 automations, perfect for solopreneurs</div>
-          <ul>
-            <li>✓ 1 custom AI automation</li>
-            <li>✓ Setup + onboarding included</li>
-            <li>✓ Monthly tuning & support</li>
-            <li>✓ Connect up to 3 apps</li>
-          </ul>
-          <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
-        </div>
-        <div class="pricing-card pricing-card-featured">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-tier">Growth</div>
-          <div class="pricing-price">$597<span>/mo</span></div>
-          <div class="pricing-desc">Full automation stack for growing businesses</div>
-          <ul>
-            <li>✓ Up to 5 custom automations</li>
-            <li>✓ Priority setup (5 days)</li>
-            <li>✓ Weekly performance reports</li>
-            <li>✓ Unlimited app integrations</li>
-            <li>✓ Dedicated account manager</li>
-          </ul>
-          <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
-        </div>
-        <div class="pricing-card">
-          <div class="pricing-tier">Scale</div>
-          <div class="pricing-price">$1,297<span>/mo</span></div>
-          <div class="pricing-desc">Enterprise-grade automation for scaling teams</div>
-          <ul>
-            <li>✓ Unlimited automations</li>
-            <li>✓ Custom AI model training</li>
-            <li>✓ Team-wide rollout</li>
-            <li>✓ SLA + dedicated engineer</li>
-          </ul>
-          <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
-        </div>
-      </div>
-      <p class="pricing-note">🎁 Early waitlist members get 50% off their first 3 months.</p>
-    </div>
-  </section>
+  <!-- WAITLIST -->
+  <section id="waitlist" class="py-28 waitlist-form-bg relative overflow-hidden">
+    <div class="noise-overlay"></div>
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-brand-600/10 blur-3xl pointer-events-none"></div>
 
-  <!-- WAITLIST FORM -->
-  <section class="section section-waitlist" id="waitlist">
-    <div class="container container-sm">
-      <div class="section-label">Waitlist</div>
-      <h2>Get Early Access to FlowMind AI</h2>
-      <p class="section-sub">We're onboarding businesses in batches. Join now to lock in your early-access discount and be first in line.</p>
+    <div class="relative max-w-xl mx-auto px-6 text-center">
+      <p class="text-brand-500 font-semibold text-sm uppercase tracking-widest mb-4">Join the Waitlist</p>
+      <h2 class="text-4xl sm:text-5xl font-black tracking-tight mb-4">
+        Be first in line.<br/>Beta is <span class="text-brand-500">100% free.</span>
+      </h2>
+      <p class="text-slate-400 mb-10 text-lg">
+        We're opening beta access in small batches. Drop your email and we'll
+        notify you the moment your spot opens &mdash; plus early-bird pricing locked forever.
+      </p>
 
-      <form class="waitlist-form" id="waitlistForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@yourbusiness.com" required />
-          </div>
+      <form id="waitlist-form" class="space-y-3" onsubmit="submitWaitlist(event)">
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input
+            id="waitlist-email"
+            type="email"
+            placeholder="you@email.com"
+            required
+            class="flex-1 px-5 py-4 rounded-full bg-slate-800 border border-white/15 text-white placeholder-slate-500 text-base transition-all focus:border-brand-500"
+          />
+          <button
+            type="submit"
+            id="waitlist-btn"
+            class="whitespace-nowrap bg-brand-600 hover:bg-brand-500 text-white font-bold px-8 py-4 rounded-full text-base transition-all hover:scale-105 hover:shadow-lg hover:shadow-brand-600/30"
+          >
+            Join Waitlist &rarr;
+          </button>
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="business">Business Type</label>
-            <select id="business" name="business" required>
-              <option value="" disabled selected>Select your industry</option>
-              <option>Home Services (HVAC, Plumbing, Roofing, etc.)</option>
-              <option>Health & Wellness (Salon, Spa, Clinic)</option>
-              <option>Real Estate</option>
-              <option>E-commerce / Retail</option>
-              <option>Professional Services (Accounting, Legal, Consulting)</option>
-              <option>Restaurant / Food & Beverage</option>
-              <option>Fitness / Personal Training</option>
-              <option>Agency / Marketing</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="size">Business Size</label>
-            <select id="size" name="size" required>
-              <option value="" disabled selected>Number of employees</option>
-              <option>Solo / Just me</option>
-              <option>2–5 people</option>
-              <option>6–20 people</option>
-              <option>21–50 people</option>
-              <option>50+ people</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="pain">What's your #1 time-wasting task right now?</label>
-          <textarea id="pain" name="pain" rows="3" placeholder="e.g. Answering the same customer questions over and over, following up with leads, creating quotes..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-full">
-          <span class="btn-text">Reserve My Spot →</span>
-          <span class="btn-loading" style="display:none">Saving your spot...</span>
-        </button>
+        <p class="text-slate-500 text-sm">No credit card. No spam. Unsubscribe anytime.</p>
       </form>
 
-      <!-- Success state -->
-      <div class="waitlist-success" id="waitlistSuccess" style="display:none">
-        <div class="success-icon">🎉</div>
-        <h3>You're on the list!</h3>
-        <p>We'll be in touch within 48 hours with your early access details. Check your inbox (and spam, just in case).</p>
-        <p class="success-share">Know another business owner who needs this? <button class="btn-link" onclick="shareWaitlist()">Share FlowMind AI →</button></p>
+      <div id="waitlist-success" class="hidden text-center py-4">
+        <div class="text-5xl mb-4">&#x1F389;</div>
+        <h3 class="text-2xl font-black mb-2 text-brand-400">You're on the list!</h3>
+        <p class="text-slate-400">We'll email you the moment your beta spot opens.<br/>Check your inbox for a confirmation.</p>
+      </div>
+
+      <div class="mt-10 flex flex-wrap justify-center gap-6 text-slate-500 text-sm">
+        <span class="flex items-center gap-2"><span class="text-brand-500">&#x2713;</span> HIPAA-aware storage</span>
+        <span class="flex items-center gap-2"><span class="text-brand-500">&#x2713;</span> We never sell your data</span>
+        <span class="flex items-center gap-2"><span class="text-brand-500">&#x2713;</span> Cancel anytime</span>
+      </div>
+
+      <div class="mt-10 inline-flex items-center gap-3 pill-badge rounded-full px-6 py-3">
+        <div class="flex -space-x-2">
+          <div class="w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-purple-500 border-2 border-slate-900"></div>
+          <div class="w-7 h-7 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 border-2 border-slate-900"></div>
+          <div class="w-7 h-7 rounded-full bg-gradient-to-br from-orange-400 to-red-500 border-2 border-slate-900"></div>
+          <div class="w-7 h-7 rounded-full bg-brand-600 border-2 border-slate-900 flex items-center justify-center text-xs font-bold">+</div>
+        </div>
+        <span class="text-brand-400 font-semibold text-sm" id="waitlist-count">2,841 people already waiting</span>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section section-faq">
-    <div class="container container-sm">
-      <div class="section-label">FAQ</div>
-      <h2>Common Questions</h2>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>Do I need any technical skills?</summary>
-          <p>None at all. We handle everything — setup, configuration, testing, and ongoing management. You just tell us what you need and we build it.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How is this different from using ChatGPT myself?</summary>
-          <p>ChatGPT is a tool — you still have to use it manually every time. FlowMind AI builds automations that run on their own 24/7, connect to your real business systems, and are customized specifically for how your business works.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What apps and tools does it work with?</summary>
-          <p>We integrate with 100+ platforms including Gmail, Outlook, Google Calendar, WhatsApp, SMS, Stripe, QuickBooks, Xero, HubSpot, Salesforce, Shopify, and many more. If you use it, we can probably connect to it.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How long does setup take?</summary>
-          <p>Most clients are fully live within 5 business days of their discovery call. Complex setups may take up to 2 weeks.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Is there a contract?</summary>
-          <p>No long-term contracts. All plans are month-to-month and you can cancel anytime. We keep your business by getting results, not locking you in.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What's the early access discount?</summary>
-          <p>Waitlist members get 50% off their first 3 months on any plan. That's up to $1,941 in savings. The discount is locked in as long as you stay subscribed.</p>
-        </details>
+  <section class="py-24 bg-slate-950">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-black tracking-tight">Common questions</h2>
+      </div>
+      <div class="space-y-4">
+
+        <div class="faq-item border border-white/8 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-lg hover:text-brand-400 transition-colors">
+            Is this medically reviewed?
+            <span class="faq-icon text-brand-500 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-body hidden px-6 pb-5 text-slate-400 leading-relaxed">
+            Our meal plans and nutritional guidelines are developed in consultation with registered dietitians who specialize in GLP-1 therapy. PlateMate AI is not a medical product and does not replace your doctor or care team &mdash; we make it easier to follow the dietary guidance they already give you.
+          </div>
+        </div>
+
+        <div class="faq-item border border-white/8 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-lg hover:text-brand-400 transition-colors">
+            Which GLP-1 medications do you support?
+            <span class="faq-icon text-brand-500 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-body hidden px-6 pb-5 text-slate-400 leading-relaxed">
+            At launch: Ozempic (semaglutide), Wegovy (semaglutide high-dose), Mounjaro (tirzepatide), and Zepbound (tirzepatide). We're adding Rybelsus (oral semaglutide) and Saxenda (liraglutide) shortly after.
+          </div>
+        </div>
+
+        <div class="faq-item border border-white/8 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-lg hover:text-brand-400 transition-colors">
+            How much will it cost after beta?
+            <span class="faq-icon text-brand-500 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-body hidden px-6 pb-5 text-slate-400 leading-relaxed">
+            Beta is completely free. After beta, pricing will be $19/month or $149/year. Waitlist members who join before launch lock in a permanent early-bird rate of $12/month or $99/year &mdash; no matter when they upgrade.
+          </div>
+        </div>
+
+        <div class="faq-item border border-white/8 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-lg hover:text-brand-400 transition-colors">
+            Do I have to cook? I hate cooking.
+            <span class="faq-icon text-brand-500 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-body hidden px-6 pb-5 text-slate-400 leading-relaxed">
+            Nope. You can filter for "no-cook", "under 10 minutes", or "restaurant-friendly" meals. We also include a guide to ordering at major restaurant chains while staying on your GLP-1 plan.
+          </div>
+        </div>
+
+        <div class="faq-item border border-white/8 rounded-2xl overflow-hidden">
+          <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-5 flex items-center justify-between font-semibold text-lg hover:text-brand-400 transition-colors">
+            When does beta launch?
+            <span class="faq-icon text-brand-500 text-2xl font-light">+</span>
+          </button>
+          <div class="faq-body hidden px-6 pb-5 text-slate-400 leading-relaxed">
+            We're targeting a Q3 2026 beta launch, rolling out in batches of 200 users per week. The earlier you join the waitlist, the earlier you get access.
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="section section-final-cta">
-    <div class="container container-sm text-center">
-      <h2>Your Competitors Are Already Automating.<br />Don't Get Left Behind.</h2>
-      <p>Join 2,400+ business owners who've already claimed their spot. Early access closes when we hit capacity.</p>
-      <a href="#waitlist" class="btn btn-primary btn-lg">Join the Waitlist Now →</a>
+  <!-- FOOTER CTA -->
+  <section class="py-20 bg-gradient-to-b from-slate-950 to-brand-900/20">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-black tracking-tight mb-4">Your GLP-1 journey deserves better food.</h2>
+      <p class="text-slate-400 mb-8 text-lg">Join 2,841+ people waiting for the meal plan that actually works with their medication.</p>
+      <a href="#waitlist"
+         class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-bold px-10 py-5 rounded-full text-xl transition-all hover:scale-105 hover:shadow-xl hover:shadow-brand-600/30">
+        Claim Your Free Spot &rarr;
+      </a>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="logo">
-          <span class="logo-icon">⚡</span>
-          <span class="logo-text">FlowMind <span class="logo-ai">AI</span></span>
-        </div>
-        <div class="footer-links">
-          <a href="mailto:hello@flowmindai.com">hello@flowmindai.com</a>
-          <span>·</span>
-          <a href="#waitlist">Privacy Policy</a>
-          <span>·</span>
-          <a href="#waitlist">Terms of Service</a>
-        </div>
-        <p class="footer-copy">© 2026 FlowMind AI. All rights reserved.</p>
+  <footer class="border-t border-white/5 bg-slate-950 py-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-sm">
+      <div class="flex items-center gap-2">
+        <span class="text-lg">&#x1F957;</span>
+        <span class="font-semibold text-white">PlateMate AI</span>
+        <span class="text-slate-600">&mdash; Meal planning for GLP-1 users</span>
       </div>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white transition-colors">Privacy</a>
+        <a href="#" class="hover:text-white transition-colors">Terms</a>
+        <a href="mailto:hello@platemateai.com" class="hover:text-white transition-colors">Contact</a>
+      </div>
+      <p>&copy; 2026 PlateMate AI. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script>
+    function toggleFaq(btn) {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = !body.classList.contains('hidden');
+      document.querySelectorAll('.faq-body').forEach(b => b.classList.add('hidden'));
+      document.querySelectorAll('.faq-icon').forEach(i => { i.textContent = '+'; });
+      if (!isOpen) {
+        body.classList.remove('hidden');
+        icon.textContent = '−';
+      }
+    }
+
+    function submitWaitlist(e) {
+      e.preventDefault();
+      const email = document.getElementById('waitlist-email').value;
+      const btn = document.getElementById('waitlist-btn');
+      btn.textContent = 'Adding you...';
+      btn.disabled = true;
+      setTimeout(() => {
+        document.getElementById('waitlist-form').classList.add('hidden');
+        document.getElementById('waitlist-success').classList.remove('hidden');
+        document.getElementById('waitlist-count').textContent = '2,842 people already waiting';
+        document.getElementById('hero-count').textContent = '2,842';
+        console.log('Waitlist signup:', email);
+      }, 1200);
+    }
+  </script>
+
 </body>
 </html>
